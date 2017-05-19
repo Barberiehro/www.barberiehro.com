@@ -1,3 +1,4 @@
+         <link href="menu/css/simple-sidebar.css" rel="stylesheet">
      <section class="main-header">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -10,26 +11,64 @@
                     </button>
                     <a class="navbar-brand" href="#"><img src="img/logo/logo.png" class="logo_circle" alt="logo" onclick="location.reload();"></a>
                 </div>
-                <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
-                    <div class="col-md-8 col-xs-12 nav-wrap">
+                <div class="col-md-8 col-xs-12 nav-wrap">
                         <ul class="nav navbar-nav">
-                            <li><a href="#" onclick="location.reload();">Home</a></li>
-                            <li><a href="#" onclick="llama('carrusel','pages/services.html')">Servicios</a></li>
-                            <li><a href="#" onclick="llama('carrusel','pages/Quienes_somos.html')">Qui&eacute;nes Somos</a></li>
-                            <li><a href="#" onclick="llama('carrusel','pages/contact.html')">Contacto</a></li>
+                            <li><a href="#" onclick="location.reload();" style="font-size: 11px;">Home</a></li>
+                            <li><a href="#" onclick="llama('carrusel','pages/services.html'), muestra('Header','pages/header.html')" style="font-size: 11px;">Servicios</a></li>
+                            <li><a href="#" onclick="llama('carrusel','pages/Quienes_somos.html'), muestra('Header','pages/header.html')" style="font-size: 12px;">Qui&eacute;nes Somos</a></li>
+                            <li><a href="#" onclick="llama('carrusel','pages/contact.html'), muestra('Header','pages/header.html')" style="font-size: 11px;">Contacto</a></li>
+                            <li><a href="#menu-toggle" id="menu-toggle" style="font-size: 11px; color: white;">Registro</a></li>
+                            <li><a href="#" onclick="llama('carrusel','pages/Login.html'), muestra('Header','pages/header.html')" style="font-size: 11px;">Login</a></li>
                         </ul>
                     </div>
                    <div class="social-media hidden-sm hidden-xs">
                         <ul class="nav navbar-nav">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" onclick="llama('carrusel','pages/contact.html')"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="#" onclick="llama('carrusel','pages/Login.html')"><i class="fa fa-envelope"></i></a></li>
                             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+             <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" >
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+
+                    <a style="color: white;">
+                        Registro
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="llama('carrusel','pages/NServicio.php'), muestra('Header','pages/header.html')" style="cursor: pointer;">Servicios</a>
+                </li>
+                <li>
+                    <a href="#" onclick="llama('carrusel','pages/Nuevo.html'), muestra('Header','pages/header.html')
+                    " style="cursor: pointer;">Usuarios</a>
+                </li>
+                
+            </ul>
+        </div>
         </nav>
+
+        
+        
+
+        <script src="menu/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="menu/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 
 
